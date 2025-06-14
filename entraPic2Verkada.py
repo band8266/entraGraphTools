@@ -3,11 +3,11 @@ import msal
 import io
 
 # === CONFIGURATION ===
-TENANT_ID = "...."
-CLIENT_ID = "...."
-CLIENT_SECRET = "...."
-GROUP_ID = "...."
-VERKADA_API_KEY= "...."
+TENANT_ID = os.environ["TENANT_ID"]
+CLIENT_ID = os.environ["CLIENT_ID"]
+CLIENT_SECRET = os.environ["CLIENT_SECRET"]
+GROUP_ID = os.environ["GROUP_ID"]
+VERKADA_API_KEY= os.environ["VERKADA_API_KEY"]
 VERKADA_REGION = "api"  # Or 'eu', 'ca', etc.
 
 

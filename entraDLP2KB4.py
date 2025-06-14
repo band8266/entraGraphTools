@@ -2,11 +2,11 @@ import requests
 from msal import ConfidentialClientApplication
 import time
 # === CONFIGURATION ===
-TENANT_ID = "...."
-CLIENT_ID = "...."
-CLIENT_SECRET = "...."
+TENANT_ID = os.environ["TENANT_ID"]
+CLIENT_ID = os.environ["CLIENT_ID"]
+CLIENT_SECRET = os.environ["CLIENT_SECRET"]
 KB4_EVENT_URL = "https://api.events.knowbe4.com/events"
-KB4_EVENT_API_KEY = "...."
+KB4_EVENT_API_KEY = os.environ["KB4_EVENT_API_KEY"]
 DRY_RUN = False  # Set to False to actually send to KB4
 
 # === Get MS Graph Token ===
