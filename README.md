@@ -13,22 +13,32 @@ A suite of automation tools for Microsoft Entra (Azure AD) and related platforms
 - **entraPic2Verkada.py**  
   Synchronizes user profile photos from Microsoft Entra to Verkada access control systems, ensuring user images are up-to-date across platforms.
 
+ 
+## Requirements
+
+- Python 3.8 or later
+- msal
+- python-dotenv
+- requests
+
+
 ## Setup
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-org/entra-tools.git
-   cd entra-tools
+   git clone https://github.com/your-org/entraGraphTools.git
+   cd entraGraphTools
    ```
 
 2. **Install dependencies**
-   Ensure you have Python 3.7+ and pip installed. Then run:
-   ```bash
-   pip3 install -r requirements.txt
-   ```
-   If `requirements.txt` is not present, install manually:
+   Ensure you have Python 3.8+ and pip installed. Then run:
    ```bash
    pip3 install msal python-dotenv requests
+   ```
+
+   If a `requirements.txt` file is provided, you can instead run:
+   ```bash
+   pip3 install -r requirements.txt
    ```
 
 3. **Configure environment variables**
@@ -37,12 +47,12 @@ A suite of automation tools for Microsoft Entra (Azure AD) and related platforms
    TENANT_ID=your-tenant-id
    CLIENT_ID=your-client-id
    CLIENT_SECRET=your-client-secret
-   KB4_EVENT_URL=https://api.events.knowbe4.com/events
    KB4_EVENT_API_KEY=your-knowbe4-api-key
    GROUP_ID=your-entra-group-id
    VERKADA_API_KEY=your-verkada-api-key
    VERKADA_REGION=api  # or 'eu', 'ca', etc.
    ```
+Optionally set `KB4_EVENT_URL` to override the default KnowBe4 endpoint.
 
 ## Usage
 
