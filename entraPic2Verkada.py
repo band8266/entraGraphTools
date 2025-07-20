@@ -1,6 +1,11 @@
 import requests
 import msal
 import io
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from a .env file if present
+load_dotenv()
 
 # === CONFIGURATION ===
 TENANT_ID = os.environ["TENANT_ID"]
