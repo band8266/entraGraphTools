@@ -1,6 +1,12 @@
 import requests
 from msal import ConfidentialClientApplication
 import time
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from a .env file if present
+load_dotenv()
+
 # === CONFIGURATION ===
 TENANT_ID = os.environ["TENANT_ID"]
 CLIENT_ID = os.environ["CLIENT_ID"]
