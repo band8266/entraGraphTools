@@ -1,3 +1,4 @@
+import os
 import requests
 from msal import ConfidentialClientApplication
 import time
