@@ -39,11 +39,11 @@ while alert_url:
         uid   = alert.get("id")
         upn   = alert.get("userStates", [{}])[0].get("userPrincipalName")
         title = alert.get("title","No title")
-        time  = alert.get("createdDateTime","Unknown")
+        timestamp = alert.get("createdDateTime", "Unknown")
         if not upn:
             continue
 
-        desc = f"DLP Alert: {title} on {time}"
+        desc = f"DLP Alert: {title} on {timestamp}"
         payload = {
             "target_user":  upn,
             "event_type":   "dlp_violation",
